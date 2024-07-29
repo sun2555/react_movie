@@ -33,7 +33,7 @@ export function Home() {
   //상태변수를 설정
   const [isLoading, setIsyLoading] = useState(true);
   const [loadCounter, setLoadCounter] = useState(0);
-  const [movies, setMovies] = useState(null);
+  const [Movies, setMovies] = useState(null);
 
   const fetchMovies = async ()=>{
     console.log('fetchMovies 호출');
@@ -55,9 +55,9 @@ export function Home() {
     return (
       <div>
         <h1>Movie List(Home)</h1>
-        <ul className='movies'>
+        <ul className='Movies'>
           {
-            movies.map(item =>{
+            Movies.map(item =>{
               return (
                 <Movie
                   key = {item.id}                  
